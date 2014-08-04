@@ -1,0 +1,55 @@
+#compassPluginSettingsForm input[type = 'checkbox']
+{
+    display: inline;
+}
+
+.compass-not-installed-alert
+{
+    display: none;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #b32b2b;
+    color: #fff;
+}
+
+.compass-console-log
+{
+    display: block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 20px;
+    width: auto;
+    max-width: 750px;
+    height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.compass-console-log div
+{
+    width: 100%;   
+}
+
+
+.compass-color-black { color: #000; }
+.compass-color-red { color: #f00; }
+.compass-color-green { color: #0f0; }
+.compass-color-yellow { color: #ff0; }
+.compass-color-blue { color: #00f; }
+.compass-color-magenta { color: #f0f; }
+.compass-color-cyan { color: #0ff; }
+.compass-color-white { color: #fff; }
+
+.compass-text-bold { font-weight: bold; }
+.compass-text-italic { font-style: italic; }
+.compass-text-underline { text-decoration: underline; }
+
+.buttons
+{
+    margin: 10px;
+    width: auto;
+    text-align: center;
+}

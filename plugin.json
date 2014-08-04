@@ -1,0 +1,13 @@
+[{
+    "author": "Vinicius Gerevini",
+    "version": "0.1",
+    "name": "Codiad Compass Plugin",
+    "url": "https://github.com/ViniciusGerevini/Codiad-Compass-Plugin",
+    "rightbar": [
+        {
+            "action": "codiad.Compass.showConfigurationModal();",
+            "icon": "icon-compass",
+            "title": "Compass"
+        }
+    ]
+}]
