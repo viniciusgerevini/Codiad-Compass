@@ -57,6 +57,7 @@
             break;
             
         case 'get-last-execution-time':
+            $compass->touch();
             $console = new Console($logFileName);
             echo '{"status":"success","message": '.$console->lastExecutionTime().' }';
             break;

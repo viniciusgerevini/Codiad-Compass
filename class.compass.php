@@ -23,7 +23,7 @@
         
         public function watch($path) {
             
-            $pid = shell_exec('compass watch "'.$path.'" > "'.$this->outputFile.'" 2>&1 & echo $!');
+            $pid = shell_exec('ruby ./watch.rb "'.$path.'" "'.$this->outputFile.'" > /dev/null 2>&1 & echo $!');
             
             $this->setPid($pid);
             
@@ -37,7 +37,7 @@
             if(!$this->isRunning())
                 return '{"status":"success","message":"compass watch is already stopped"}';
                 
-            if(!$this->run("kill -9 ".$this->getPid()))
+            if(!$this->run("kill -15 ".$this->getPid()))
             	return '{"status":"success","message":"compass watch stopped"}';
             else
             	return '{"status":"error","message":"error while stopping compass"}';
@@ -66,6 +66,16 @@
             	return '{"status":"success","message": "compass installed"}';
             else
             	return '{"status":"error","message":"compass not installed"}';
+        }
+
+        public function touch() {
+            if(!$this->isRunning())
+                return '{"status":"error","message":"compass watch is not running"}';
+                
+            if(!$this->run("kill -10 ".$this->getPid()))
+                return '{"status":"success","message":"ok"}';
+            else
+                return '{"status":"error","message":"error while contacting compass"}';
         }
         
         private function run($cmd) {

@@ -37,7 +37,7 @@
 		init: function() {
 			var _self = this;
 			
-			this.loadSettings();
+			this.loadSettings(_self);
 
 			$("#editor-bottom-bar").append('<div id="compassWatch" title="Compass"><div class="divider"></div><a class="ico-wrapper" onclick="codiad.Compass.showLogModal();"><span>compass:&nbsp;&nbsp;</span><span class="status">stopped</span></a></div>');
 
@@ -256,8 +256,7 @@
 		 * Load settings
 		 *
 		 */
-		loadSettings: function() {
-			var _self = this;
+		loadSettings: function(_self) {
 			$.getJSON(this.controller + "?action=load-settings", function(data) {
 				_self.settings = data;
 			});
@@ -297,7 +296,7 @@
 				} else {
 					codiad.message.success("Compass: settings saved");
 				}
-				_self.loadSettings();
+				_self.loadSettings(_self);
 			});
 		},
 

@@ -1,6 +1,6 @@
 #Codiad Compass Plugin
 
-Compass commands integration for Codiad IDE
+Compass commands integration for [Codiad IDE](https://github.com/Codiad/Codiad)
 
 ##Requirements
 - [Compass](http://compass-style.org/)
@@ -19,14 +19,13 @@ Compass commands integration for Codiad IDE
 
 ##To do
 
-- bug fix: If user log out without stop watch proccess it keeps running 'forever'
 - Change console log to work with multiple users
 - Include compile and clean commands information into log
 - Internationalization
 
 #Contact
 
-[@Vini_Gerevini](http://twitter.com/vini_gerevini)
+Twitter: [@Vini_Gerevini](http://twitter.com/vini_gerevini)
 
 ##License
 
