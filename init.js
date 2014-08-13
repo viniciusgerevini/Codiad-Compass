@@ -288,7 +288,7 @@
 			this.settings.showWatchStatusInBottomBar = $("#compassPluginSettingsForm [name = 'showWatchStatusInBottomBar']").is(":checked");
 
 			$.post(this.controller + "?action=save-settings", {
-				settings: this.settings
+				settings: JSON.stringify(this.settings)
 			}, function(data) {
 				var json = JSON.parse(data);
 				if (json.status == "error") {

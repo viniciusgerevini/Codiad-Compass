@@ -21,9 +21,7 @@
         //=========
         case 'save-settings':
             if (isset($_POST['settings'])) {
-                $fp = fopen('./data/custom.settings.json', 'w');
-                fwrite($fp, json_encode($_POST['settings']));
-                fclose($fp);
+                saveJSON("codiadCustom.settings.php", json_decode($_POST['settings']), "config");
                 echo '{"status":"success","message":"Settings saved"}';
             } else {
                 echo '{"status":"error","message":"Missing parameter"}';
@@ -31,8 +29,8 @@
             break;
             
         case 'load-settings':
-            if(file_exists('./data/custom.settings.json')) {
-                echo file_get_contents("./data/custom.settings.json");
+            if (file_exists(DATA."/config/codiadCustom.settings.php")) {
+                echo json_encode(getJSON("codiadCustom.settings.php", "config"));
             } else {
                 echo file_get_contents("./data/settings.json");
             }
