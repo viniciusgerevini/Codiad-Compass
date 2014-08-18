@@ -11,7 +11,10 @@
     require_once('class.console.php');
     checkSession();
     
-    $logFileName = "./data/data.log";
+    $logFileName = './data/'.$_SESSION["user"].'_data.log';
+    if(!file_exists($logFileName)) {
+        file_put_contents($logFileName);
+    }
     
     $compass = new Compass($logFileName);
     

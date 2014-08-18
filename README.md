@@ -19,8 +19,6 @@ Compass commands integration for [Codiad IDE](https://github.com/Codiad/Codiad)
 
 ##To do
 
-- Change console log to work with multiple users
-- Include compile and clean commands information into log
 - Internationalization
 
 #Contact

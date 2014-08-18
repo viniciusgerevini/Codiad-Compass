@@ -19,7 +19,7 @@ if log_file == nil
 end
 
 # Execute watch
-pid = `compass watch "#{path}" > "#{log_file}" 2>&1 & echo $!`
+pid = `compass watch "#{path}" >> "#{log_file}" 2>&1 & echo $!`
 
 last_contact = Time.now
 
