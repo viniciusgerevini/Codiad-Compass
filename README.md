@@ -1,6 +1,6 @@
-#Codiad Compass Plugin
+#Codiad Compass
 
-Compass commands integration for [Codiad IDE](https://github.com/Codiad/Codiad)
+Compass commands integration plugin for [Codiad IDE](https://github.com/Codiad/Codiad)
 
 ##Requirements
 - [Compass](http://compass-style.org/)
