@@ -107,7 +107,7 @@
         case 'has-config':
             if(isset($_GET['path'])) {
             	$exists = file_exists(getRelativePath($_GET['path']).'/config.rb');
-                echo '{"status":"success","hasConfig": '.$exists.'}';
+                echo '{"status":"success","hasConfig": true}';
         	} else {
         		echo '{"status":"error","message":"Missing parameter"}';	
         	}
