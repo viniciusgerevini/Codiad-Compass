@@ -9,7 +9,7 @@
 
         public function create($path) {
             $this->informCommandToLog("compass create");
-            if(!$this->run('Compass create "'.$path.'" >> "'.$this->outputFile.'"'))
+            if(!$this->run('compass create "'.$path.'" >> "'.$this->outputFile.'"'))
                 return '{"status":"success","message": "compass project created"}';
             else
                 return '{"status":"error","message":"error"}';
@@ -17,7 +17,7 @@
 
         public function compile($path) {
             $this->informCommandToLog("compass compile");
-            if(!$this->run('Compass compile "'.$path.'" >> "'.$this->outputFile.'"'))
+            if(!$this->run('compass compile "'.$path.'" >> "'.$this->outputFile.'"'))
                 return '{"status":"success","message": "'.$path.' compiled"}';
             else
                 return '{"status":"error","message":"error compiling"}';
@@ -47,7 +47,7 @@
 
         public function clean() {
             $this->informCommandToLog("compass clean");
-            if(!$this->run('Compass clean "'.$path.'" >> "'.$this->outputFile.'"'))
+            if(!$this->run('compass clean "'.$path.'" >> "'.$this->outputFile.'"'))
                 return '{"status":"success","message": "project cleanned"}';
             else
                 return '{"status":"error","message":"error"}';
